@@ -3,7 +3,7 @@ resource "google_compute_firewall" "haproxy-firewall" {
   network = google_compute_network.clearblade-network.name
   allow {
     protocol = "tcp"
-    ports    = ["443", "1884", "8080", "8443", "8903", "8904", "8905", "8906"]
+    ports    = ["443", "1884", "8080", "8443", "8883", "8903", "8904", "8905", "8906"]
   }
   target_tags   = google_compute_instance_template.haproxy_template.tags
   source_ranges = ["0.0.0.0/0"]
