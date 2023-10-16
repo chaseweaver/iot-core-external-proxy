@@ -11,7 +11,7 @@ resource "google_secret_manager_secret" "certificate-key" {
 resource "google_secret_manager_secret" "certificate" {
   secret_id = "certificate"
   replication {
-    automatic = true
+    auto {}
   }
 }
 
